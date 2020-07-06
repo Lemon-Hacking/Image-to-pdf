@@ -1,10 +1,18 @@
 
 # Import modules
 
-from fpdf import FPDF
-from PIL import Image
 import os
 import time
+
+try:
+ from fpdf import FPDF
+except ImportError:
+ print('\nfpdf not found, install using : pip install fpdf')
+
+try:
+ from PIL import Image
+except ImportError:
+ print('\nPillow not found, install using : pip install Pillow')
 
 # Get target folder and output file name
 
