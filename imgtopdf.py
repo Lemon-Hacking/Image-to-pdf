@@ -26,7 +26,7 @@ if outname == '':
  print('Output name can\'t be empty')
  exit()
 
-if '.pdf' not in outname:
+if not outname.endswith('.pdf'):
  outname = f"{outname}.pdf"
  print('.pdf added to output pdf file name\n')
 
@@ -67,7 +67,7 @@ for index in range(0, len(dict)):
 
 print(f"\n{str(len(dict))} image files found\n\nConverting..\n")
 
-time.sleep(5)
+time.sleep(3)
 
 # Rotate landscape images if present
 
