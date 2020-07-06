@@ -43,8 +43,13 @@ for name in os.listdir(target):
   dict.append(loc)
 
 if len(dict) == 0:
- print(f"\nNo image files found in {str(os.path.basename(target))}")
- exit()
+ if target.endswith('/'):
+  tar = target[:-1]
+  print(f"\nNo image files found in {str(os.path.basename(tar))}")
+  exit()
+ else:
+  print(f"\nNo image files found in {str(os.path.basename(target))}")
+  exit()
 
 # Print detected images
 
