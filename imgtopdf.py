@@ -97,5 +97,5 @@ for img in dict:
 current = str(os.getcwd())
 final_path = str(os.path.join(current, outname))
 pdf.output(final_path, "F")
-print(f"PDF with {str(len(dict))} image files generated!")
+print(f"PDF with {str(len(dict))} image files generated! ( {outname} )")
 
